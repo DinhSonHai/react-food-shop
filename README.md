@@ -1,3 +1,4 @@
+This project gets data from node-json-server: https://github.com/DinhSonHai/node-json-server
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
