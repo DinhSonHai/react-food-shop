@@ -47,6 +47,11 @@ class TopMenu extends Component {
                             <Link to="/products">Product</Link>
                         </NavLink>
                     </NavItem>
+                    <NavItem>
+                        <NavLink>
+                            <Link to="/cart">Cart (0)</Link>
+                        </NavLink>
+                    </NavItem>
                     <UncontrolledDropdown nav inNavbar>
                         <DropdownToggle nav caret>
                         Options
