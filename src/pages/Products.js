@@ -33,9 +33,9 @@ class Products extends Component {
                                 <CardTitle>{ product.name }</CardTitle>
                                 <CardText>{ product.description }</CardText>
                                 <CartContext.Consumer>
-                                    { ({addToCart }) => {
-                                        <Button onClick={ addToCart(product) }>Add to cart</Button>
-                                    }}
+                                    { ({addToCart }) => (
+                                        <Button onClick={ () => addToCart(product) }>Add to cart</Button>
+                                        )}
                                 </CartContext.Consumer>
                                 </CardBody>
                             </Card>

@@ -14,6 +14,7 @@ import {
   DropdownItem,
   NavbarText
 } from 'reactstrap';
+import { CartContext } from '../contexts/Cart';
 
 class TopMenu extends Component {
     constructor(props) {
@@ -49,7 +50,11 @@ class TopMenu extends Component {
                     </NavItem>
                     <NavItem>
                         <NavLink>
-                            <Link to="/cart">Cart (0)</Link>
+                            <CartContext.Consumer>
+                                { ({cartItems }) => (
+                                    <Link to="/cart">Cart ({ cartItems.length })</Link>
+                                    )}
+                            </CartContext.Consumer>
                         </NavLink>
                     </NavItem>
                     <UncontrolledDropdown nav inNavbar>
