@@ -10,28 +10,6 @@ class Products extends Component {
 
         this.state = {
           products: [],
-          initState: {
-            number: 12
-          }
-        }
-        this.reducer = this.reducer.bind(this);
-        this.onClick = this.onClick.bind(this);
-    }
-    reducer(state = this.state.initState, action) {
-        console.log(action);
-        switch (action.type) {
-            case 'odd':
-                return {
-                    ...state,
-                    number: action.number,
-                }
-            case 'even':
-                return {
-                    ...state,
-                number: action.number,
-                }
-            default:
-                return state;
         }
     }
     componentDidMount() {
@@ -42,16 +20,6 @@ class Products extends Component {
           });
         })
     }
-    onClick() {
-      const store = createStore(this.reducer);
-      console.log(store.getState());
-      store.dispatch({
-        type: 'odd',
-        number: 9
-      })
-      console.log(store.getState());
-      console.log(this.state.initState)
-    }
     render() {
         const { products } = this.state;
         return (
@@ -59,7 +27,7 @@ class Products extends Component {
                 <h2>Products</h2>
                 <Row>
                     { products.map((product) => (
-                        <Col sm={ this.state.initState.number }>
+                        <Col sm="4">
                             <Card onClick={ this.onClick }>
                                 <CardImg top width="100%" src={ product.imageUrl } alt="Card image cap" />
                                 <CardBody>

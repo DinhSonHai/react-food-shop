@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 import TopMenu from './components/TopMenu';
 import Products from './pages/Products';
+import User from './pages/User';
 import { CartContext, CartProvider } from './contexts/Cart';
 
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -26,6 +27,7 @@ class App extends Component {
             <Index />
           </Route>
           <Route path="/products/" component={ Products }></Route>
+          <Route path="/user/" component={ User }></Route>
         </Router>
       </CartProvider>
     );

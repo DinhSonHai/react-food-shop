@@ -57,6 +57,11 @@ class TopMenu extends Component {
                             </CartContext.Consumer>
                         </NavLink>
                     </NavItem>
+                    <NavItem>
+                        <NavLink>
+                            <Link to="/user">User</Link>
+                        </NavLink>
+                    </NavItem>
                     <UncontrolledDropdown nav inNavbar>
                         <DropdownToggle nav caret>
                         Options
